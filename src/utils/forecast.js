@@ -9,7 +9,7 @@ const forecast = (longitude, latitude, callback) => {
     }else if(body.error){
         callback('wrong address provided!', undefined)
     }else{
-            callback(undefined, `It is currently ${body.currently.temperature} fahrenheit out. There is a ${body.currently.precipProbability}% probability of rain`)
+            callback(undefined, `It is currently ${body.currently.temperature} fahrenheit out. There is a ${body.currently.precipProbability}% probability of rain. Todays visibility is ${body.currently.visibility} `)
     }
     })
 }
